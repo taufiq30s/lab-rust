@@ -2,25 +2,30 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-const APIURL: &str = "https://api.vndb.org/kana/vn";
+// const APIURL: &str = "https://api.vndb.org/kana/vn";
 
-struct vnDataRaw {
-    title: String,
-    aliases: Vec<String>,
-    devstatus: u8,
-    released: String
-}
+// struct vnDataRaw {
+//     title: String,
+//     aliases: Vec<String>,
+//     devstatus: u8,
+//     released: String
+// }
 
-struct imageRaw {
-    url: String,
-    sexual: u8,
-    violence: u8
-}
+// struct imageRaw {
+//     url: String,
+//     sexual: u8,
+//     violence: u8
+// }
 
 #[tauri::command]
-async fn search(code: String) {
-    
+fn greet(name: String) -> String {
+    name
 }
+
+// #[tauri::command]
+// async fn search(code: String) {
+    
+// }
 
 fn main() {
     tauri::Builder::default()
